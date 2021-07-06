@@ -1,0 +1,59 @@
+.avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left:25%;
+  margin-top: 30%;
+}
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+  color: lightgrey;
+  margin-left:25%;
+  // margin-bottom: 60%;
+}
+
+.email {
+  // margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+  margin-left:20%;
+  margin-top: 10px;
+  // margin-bottom: 60%;
+}
+.sub-head{
+  padding-left: 16px;
+  color: #818CF8;
+  font: 12px "inter var",ui-sans-serif;
+  margin-top: 50px;
+}
+// a{
+//   font: 13px;
+//   color: #FFFFFF;
+//   padding: 16px 10px;
+//   margin :0px 0px 4px;
+// }
+// .icon{
+//   font: 24px;
+//   // padding: 10px 16px;
+// }
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  color: #FFFFFF;
+
+  mat-icon {
+      margin-right: 8px;
+      color: rgb(108, 110, 110);
+      font: 24px;
+  }
+}
+.tems{
+  font:13px;
+  color: #FFFFFF;
+}

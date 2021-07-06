@@ -1,0 +1,71 @@
+<mat-card>
+  <mat-toolbar style="background: white">
+    <mat-toolbar-row class="justify-content-between">
+      <button mat-button style="border-radius: 20px">
+        <b><small>MARK AS COMPLETE</small> </b>
+      </button>
+      <div>
+        <button mat-icon-button>
+          <mat-icon class="zoom-out" style="font-size: 25px; color: darkgray"
+            >more_vert</mat-icon
+          >
+        </button>
+        <button mat-icon-button>
+          <mat-icon class="turned-in" style="font-size: 25px; color: darkgray"
+            >clear</mat-icon
+          >
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</mat-card>
+<div style="padding-top: 40px; margin-left: 20px">
+  <label>Task title</label><br />
+  <input
+    type="text"
+    value="Add more error pages - 401,500 etc."
+    style="
+      width: 90%;
+      height: 60px;
+      border-radius: 5px;
+      border-color: #64748b;
+      text-align: top;
+      border-width: 0.5px;
+    "
+  />
+</div>
+
+<!-- <div style="display: flex; column-gap: 20px; margin: 10px 10px 10px 20px; ">
+  <div>
+    <div>Priority</div>
+    <div><button style="border-radius: 10px;padding:5px;background:#BBF7D0;">
+      <mat-icon>south</mat-icon>Add</button></div>
+  </div>
+  <div>
+    <div>Due date</div>
+    <div><button style="border-radius: 10px;padding: 5px;">
+      <img style="width: 20px;height: 20px;margin-right: 5px;" src="../../assets/calender-icon.png">Add</button></div>
+  </div>
+</div> -->
+
+<div style="display: flex;column-gap: 40px;margin-top: 60px;margin-left: 20px;">
+<div class="head">Priority</div>
+<div class="head">Due date</div>
+</div>
+<div style="display: flex;column-gap: 20px;margin-left: 20px;">
+
+<button style="background:#BBF7D0;border-radius: 20px; display:flex;align-items: center;justify-content: center;height: 30px;width: 20%;">
+  <mat-icon class="a" style="color: #166534;margin-top: 8px;">south </mat-icon>
+  <div style="font-size: 12px;color: #166534;">Low</div>
+  
+  
+</button>
+<button style="background:#F1F5F9;border-radius: 20px;align-items: center;justify-content: center;height: 30px;">
+  <img style="width: 15px;height: 15px;margin-right: 5px;color: #64748b;" src="../../assets/calender.png">
+  <span style="font-size: 12px;color: #64748B;">Not set</span>
+  
+  
+</button>
+
+</div>
+

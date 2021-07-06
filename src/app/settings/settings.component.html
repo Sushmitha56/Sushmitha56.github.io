@@ -1,0 +1,418 @@
+<div style="display: flex; height: 100%">
+  <div style="margin-top: 20px; display: flex; height: 100%">
+    <mat-card style="margin-left: 2%; border-radius: 1rem">
+      <mat-card-title style="margin-left: 15%">Settings</mat-card-title>
+      <mat-card-content>
+        <div
+          style="border: 1px solid rgb(181, 184, 184); margin-bottom: 10px"
+        ></div>
+        <button
+          mat-button=""
+          class="mat-focus-indicator px-3 mr-1 mat-button mat-button-base"
+          tabindex="0"
+          (click)="notification()"
+        >
+          <span style="float: left; text-align: left">
+            <img src="assets\notifications_black_24dp.svg" /> &nbsp;
+            <span style="font-weight: 700; margin-left: 0">Notifications</span
+            ><br />
+            <span>Manage when you'll be notified on which channels</span>
+          </span>
+        </button>
+        <button
+          mat-button=""
+          class="mat-focus-indicator px-3 mr-1 mat-button mat-button-base"
+          tabindex="0"
+          (click)="security()"
+        >
+          <span style="float: left; text-align: left">
+            <img src="assets\lock_black_24dp.svg" />&nbsp;
+            <span style="font-weight: 700; margin-left: 0">Security</span><br />
+            <span>
+              Manage your password and 2-step verification preferences</span
+            >
+          </span>
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div style="margin-left: 2%; width: 94%" *ngIf="notifications">
+    <mat-card
+      style="
+        height: 100%;
+        width: 100%;
+        background-color: rgb(216, 234, 241);
+        border-radius: 1rem;
+      "
+    >
+      <mat-card-title style="margin-left: 5%; margin-top: 5%; font-weight: 700"
+        >Notifications</mat-card-title
+      >
+      <div class="hello">
+        <div class="w-full max-w-3xl">
+          <form novalidate="" class="ng-valid ng-dirty ng-touched">
+            <div class="w-full text-xl">Alerts</div>
+            <div class="grid grid-cols-1 gap-6 w-full mt-8">
+              <div class="flex items-center justify-between">
+                <div class="flex-auto cursor-pointer">
+                  <div class="leading-6 font-medium">Communication</div>
+                  <div class="text-md text-secondary">
+                    Get news, announcements, and product updates.
+                  </div>
+                </div>
+                <mat-slide-toggle
+                  class="
+                    mat-slide-toggle
+                    ml-2
+                    mat-primary
+                    ng-valid ng-dirty ng-touched
+                  "
+                  id="mat-slide-toggle-81"
+                  tabindex="-1"
+                  ><label
+                    class="mat-slide-toggle-label"
+                    for="mat-slide-toggle-81-input"
+                  >
+                    <span class="mat-slide-toggle-content"
+                      ><span style="display: none">&nbsp;</span></span
+                    ></label
+                  ></mat-slide-toggle
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex-auto cursor-pointer">
+                  <div class="leading-6 font-medium">Security</div>
+                  <div class="text-md text-secondary">
+                    Get important notifications about your account security.
+                  </div>
+                </div>
+                <mat-slide-toggle
+                  class="
+                    mat-slide-toggle
+                    ml-2
+                    mat-primary
+                    ng-untouched ng-pristine ng-valid
+                  "
+                  id="mat-slide-toggle-82"
+                  tabindex="-1"
+                  ><label
+                    class="mat-slide-toggle-label"
+                    for="mat-slide-toggle-82-input"
+                  >
+                    <span class="mat-slide-toggle-content"
+                      ><span style="display: none">&nbsp;</span></span
+                    ></label
+                  ></mat-slide-toggle
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex-auto cursor-pointer">
+                  <div class="leading-6 font-medium">Meetups</div>
+                  <div class="text-md text-secondary">
+                    Get an email when a Meetup is posted close to my location.
+                  </div>
+                </div>
+                <mat-slide-toggle
+                  class="
+                    mat-slide-toggle
+                    ml-2
+                    mat-primary
+                    ng-untouched ng-pristine ng-valid
+                  "
+                  id="mat-slide-toggle-83"
+                  tabindex="-1"
+                  ><label
+                    class="mat-slide-toggle-label"
+                    for="mat-slide-toggle-83-input"
+                  >
+                    <span class="mat-slide-toggle-content"
+                      ><span style="display: none">&nbsp;</span></span
+                    ></label
+                  ></mat-slide-toggle
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <div style="margin-left: 2%; width: 94%" *ngIf="secure">
+    <mat-card
+      style="
+        height: 100%;
+        width: 100%;
+        background-color: rgb(216, 234, 241);
+        border-radius: 1rem;
+      "
+    >
+      <mat-card-title style="margin-left: 5%; margin-top: 5%; font-weight: 700"
+        >Security</mat-card-title
+      >
+      <div class="hello">
+        <div class="w-full max-w-3xl">
+          <form novalidate="" class="ng-valid ng-dirty ng-touched">
+            <div class="w-full">
+              <div class="text-xl">Change your password</div>
+              <div class="text-secondary">
+                You can only change your password twice within 24 hours!
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-4 gap-6 w-full mt-8">
+              <div class="sm:col-span-4">
+                <mat-form-field
+                  class="
+                    mat-form-field
+                    fuse-mat-no-subscript
+                    w-full
+                    ng-tns-c33-568
+                    mat-primary
+                    mat-form-field-type-mat-input
+                    mat-form-field-appearance-fill
+                    mat-form-field-can-float
+                    mat-form-field-has-label
+                    ng-valid ng-star-inserted ng-touched ng-dirty
+                    mat-form-field-hide-placeholder
+                  "
+                  ><div class="mat-form-field-wrapper ng-tns-c33-568">
+                    <div class="mat-form-field-flex ng-tns-c33-568">
+                      <!---->
+                      <div
+                        class="
+                          mat-form-field-prefix
+                          ng-tns-c33-568 ng-star-inserted
+                        "
+                      >
+                        <mat-icon
+                          role="img"
+                          matprefix=""
+                          class="
+                            mat-icon
+                            notranslate
+                            icon-size-5
+                            mat-icon-no-color
+                            ng-tns-c33-568
+                          "
+                          aria-hidden="true"
+                          data-mat-icon-type="svg"
+                          data-mat-icon-name="key"
+                          data-mat-icon-namespace="heroicons_solid"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            fit=""
+                            height="100%"
+                            width="100%"
+                            preserveAspectRatio="xMidYMid meet"
+                            focusable="false"
+                            style="color: #94A3B8;"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z"
+                              clip-rule="evenodd"
+                            ></path></svg ></mat-icon>
+                      </div>
+                      <!---->
+                      <div class="mat-form-field-infix ng-tns-c33-568">
+                        <input
+                          type="password"
+                          matinput=""
+                          class="
+                            mat-input-element mat-form-field-autofill-control
+                            ng-tns-c33-568 ng-valid
+                            cdk-text-field-autofill-monitored
+                            ng-touched ng-dirty
+                          "
+                          id="mat-input-172"
+                          aria-invalid="false"
+                          aria-required="false"
+                        /><span
+                          class="mat-form-field-label-wrapper ng-tns-c33-568"
+                          ><label
+                            class="
+                              mat-form-field-label
+                              ng-tns-c33-568 ng-star-inserted
+                              mat-empty mat-form-field-empty
+                            "
+                            id="mat-form-field-label-435"
+                            for="mat-input-172"
+                            aria-owns="mat-input-172"
+                            ><!----><mat-label
+                              class="ng-tns-c33-568 ng-star-inserted"
+                              >Current password</mat-label
+                            ><!----><!----></label
+                          ><!----></span
+                        >
+                      </div>
+                      <!---->
+                    </div>
+                    <div
+                      class="
+                        mat-form-field-underline
+                        ng-tns-c33-568 ng-star-inserted
+                      "
+                    >
+                      <span class="mat-form-field-ripple ng-tns-c33-568"></span>
+                    </div>
+                    <!---->
+                    <div
+                      class="mat-form-field-subscript-wrapper ng-tns-c33-568"
+                    >
+                      <!---->
+                      <div
+                        class="
+                          mat-form-field-hint-wrapper
+                          ng-tns-c33-568
+                          ng-trigger
+                          ng-trigger-transitionMessages
+                          ng-star-inserted
+                        "
+                        style="opacity: 1; transform: translateY(0%)"
+                      >
+                        <!---->
+                        <div
+                          class="mat-form-field-hint-spacer ng-tns-c33-568"
+                        ></div>
+                      </div>
+                      <!---->
+                    </div>
+                  </div></mat-form-field
+                >
+              </div>
+              <div class="sm:col-span-4">
+                <mat-form-field
+                  class="
+                    mat-form-field
+                    fuse-mat-no-subscript
+                    w-full
+                    ng-tns-c33-569
+                    mat-primary
+                    mat-form-field-type-mat-input
+                    mat-form-field-appearance-fill
+                    mat-form-field-can-float
+                    mat-form-field-has-label
+                    mat-form-field-hide-placeholder
+                    ng-untouched ng-pristine ng-valid ng-star-inserted
+                  "
+                  ><div class="mat-form-field-wrapper ng-tns-c33-569">
+                    <div class="mat-form-field-flex ng-tns-c33-569">
+                      <!---->
+                      <div
+                        class="
+                          mat-form-field-prefix
+                          ng-tns-c33-569 ng-star-inserted
+                        "
+                      >
+                        <mat-icon
+                          role="img"
+                          matprefix=""
+                          class="
+                            mat-icon
+                            notranslate
+                            icon-size-5
+                            mat-icon-no-color
+                            ng-tns-c33-569
+                          "
+                          aria-hidden="true"
+                          data-mat-icon-type="svg"
+                          data-mat-icon-name="key"
+                          data-mat-icon-namespace="heroicons_solid"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            fit=""
+                            height="100%"
+                            width="100%"
+                            preserveAspectRatio="xMidYMid meet"
+                            focusable="false"
+                            style="color: #94A3B8;"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z"
+                              clip-rule="evenodd"
+                            ></path></svg    ></mat-icon>
+                      </div>
+                      <!---->
+                      <div class="mat-form-field-infix ng-tns-c33-569">
+                        <input
+                          type="password"
+                          matinput=""
+                          class="
+                            mat-input-element mat-form-field-autofill-control
+                            ng-tns-c33-569 ng-untouched ng-pristine ng-valid
+                            cdk-text-field-autofill-monitored
+                          "
+                          id="mat-input-173"
+                          aria-invalid="false"
+                          aria-required="false"
+                        /><span
+                          class="mat-form-field-label-wrapper ng-tns-c33-569"
+                          ><label
+                            class="
+                              mat-form-field-label
+                              ng-tns-c33-569
+                              mat-empty mat-form-field-empty
+                              ng-star-inserted
+                            "
+                            id="mat-form-field-label-437"
+                            for="mat-input-173"
+                            aria-owns="mat-input-173"
+                            ><!----><mat-label
+                              class="ng-tns-c33-569 ng-star-inserted"
+                              >New password</mat-label
+                            ><!----><!----></label
+                          ><!----></span
+                        >
+                      </div>
+                      <!---->
+                    </div>
+                    <div
+                      class="
+                        mat-form-field-underline
+                        ng-tns-c33-569 ng-star-inserted
+                      "
+                    >
+                      <span class="mat-form-field-ripple ng-tns-c33-569"></span>
+                    </div>
+                    <!---->
+                    <div
+                      class="mat-form-field-subscript-wrapper ng-tns-c33-569"
+                    >
+                      <!---->
+                      <div
+                        class="
+                          mat-form-field-hint-wrapper
+                          ng-tns-c33-569
+                          ng-trigger
+                          ng-trigger-transitionMessages
+                          ng-star-inserted
+                        "
+                        style="opacity: 1; transform: translateY(0%)"
+                      >
+                        <!---->
+                        <div
+                          class="mat-form-field-hint-spacer ng-tns-c33-569"
+                        ></div>
+                      </div>
+                      <!---->
+                    </div>
+                  </div></mat-form-field
+                >
+                <div class="mt-1 text-md text-hint">
+                  Minimum 8 characters. Must include numbers, letters and
+                  special characters.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

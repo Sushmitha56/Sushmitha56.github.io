@@ -1,0 +1,26 @@
+<ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+  [rowHeight]="50" [scrollbarV]="true" [sorts]="[{prop: 'name', dir: 'desc'}]" (click)="toggleRightSidebar()" #table (activate)="onActivate($event)">
+
+  <ngx-datatable-column name="Company" >
+    <ng-template  let-value="value" let-row="row"  ngx-datatable-cell-template >
+      {{row.company}}
+      
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Name">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.name}}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Gender">
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Actions">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+        <i class="material-icons" style='color:red'>delete</i>
+        <i class="material-icons">edit</i>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>

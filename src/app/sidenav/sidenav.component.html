@@ -1,0 +1,91 @@
+<div style="display: flex; padding: 16px 16px 16px 24px;">
+  <img
+    src="http://angular-material.fusetheme.com/assets/images/logo/logo.svg"
+  />
+  <mat-icon matBadge="3" matBadgeColor="accent" matBadgeSize="small" style="color: #94a3b8; margin-left: 60%; font: 24px">
+    notifications
+  </mat-icon>
+  <mat-icon style="color: #94a3b8; font: 24px; padding-left: 10px"
+    >account_circle</mat-icon
+  >
+  <div></div>
+</div>
+<div >
+  <img class="avatar mat-elevation-z8" src="http://angular-material.fusetheme.com/assets/images/avatars/brian-hughes.jpg" />
+
+  <h4 class="name" style="font: 14px;color:#FFFFFF;">John Smith</h4>
+  <span class="email" >john.smith@gmail.com</span>
+</div>
+<mat-divider></mat-divider>
+<div>
+  <h2 matSubheader class="sub-head" >DASHBOARDS</h2>
+  <!-- <p style="font: 11px; color: #4e5866; padding-left: 16px">
+      Unique dasboard design  </p>-->
+</div>
+<button mat-button class="menu-button" (click)='project()'>
+  <mat-icon>assignment_turned_in</mat-icon>
+  <span class="items">Project</span>
+</button>
+<button mat-button class="menu-button" (click)='settings()'>
+  <mat-icon>settings</mat-icon>
+  <span class="items">Settings</span>
+</button>
+<button mat-button class="menu-button" (click)="profile()">
+  <mat-icon>account_circle</mat-icon>
+  <span class="items">Profile</span>
+</button>
+<mat-divider></mat-divider>
+
+<div>
+  <h2 matSubheader class="sub-head" style="margin-top:20px;" >APPLICATIONS</h2>
+</div>
+<button mat-button class="menu-button">
+  <mat-icon>school</mat-icon>
+  <span class="items">Academy</span>
+</button>
+<button mat-button class="menu-button">
+  <mat-icon>calendar_today</mat-icon>
+  <span class="items">Calender</span>
+</button>
+<div>
+  <h2 matSubheader class="sub-head" style="margin-top:20px;" >PAGES</h2>
+</div>
+<button mat-button class="menu-button" (click)='activities()'>
+  <mat-icon>notes</mat-icon>
+  <span class="items">Activities</span>
+</button>
+
+        
+
+<div style="background-color: turquoise;">
+<mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+  <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" />
+
+  <h4 class="name">John Smith</h4>
+  <p class="designation">Software Engineer</p>
+
+  <mat-divider></mat-divider>
+
+  <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+  </button>
+  <button mat-button class="menu-button">
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+  </button>
+  <button mat-button class="menu-button">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-button class="menu-button">
+      <mat-icon>help</mat-icon>
+      <span>Help</span>
+  </button>
+
+</mat-sidenav>
+</div>

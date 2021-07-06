@@ -1,0 +1,45 @@
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+.child{
+    border-radius: 20px
+}
+.device-list{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.desname{
+    padding-right: 100px;
+    color: #1E392B;
+    font: 16PX;
+}
+.vert{
+    color: #64748B;
+}
+.num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    padding-top: 20px;
+
+}
+
+.role{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+}
+.update{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    color: #64748b;
+}
+
